@@ -1,0 +1,38 @@
+{
+  "name": "redux-saga-action-helper",
+  "version": "1.0.0",
+  "description": "help to create actionCreater with redux, redux-saga and dva",
+  "main": "./dist/umd/index.js",
+  "module": "./dist/esm/index.js",
+  "scripts": {
+    "build": "npm run umd && npm run esm",
+    "umd": "babel src -d ./dist/umd --no-babelrc --presets=flow,env --plugins=transform-es2015-modules-umd",
+    "esm": "babel src -d ./dist/esm --no-babelrc --presets=flow,env",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weiliy/redux-saga-action-helper.git"
+  },
+  "keywords": [
+    "redux",
+    "redux-saga",
+    "dva",
+    "actionCreator"
+  ],
+  "author": "Weili Yi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weiliy/redux-saga-action-helper/issues"
+  },
+  "homepage": "https://github.com/weiliy/redux-saga-action-helper#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0"
+  }
+}
